@@ -1,5 +1,8 @@
 # parallel-computing-cpp
 
+> **MIPT coursework, March–April 2022, reorganised 2026.**
+> Original repository and dates per component under [Provenance](#provenance).
+
 Concurrency primitives and measurements in C++20: parallel Monte Carlo
 integration with `std::packaged_task` and `std::future`, and thread-safe stack
 and queue implementations benchmarked against Boost.Lockfree.
