@@ -1,14 +1,14 @@
 # parallel-computing-cpp
 
-> **MIPT coursework, March–April 2022, reorganised 2026.**
+> **MIPT, March–April 2022 · reorganised 2026.**
 > Original repository and dates per component under [Provenance](#provenance).
 
 Concurrency primitives and measurements in C++20: parallel Monte Carlo
 integration with `std::packaged_task` and `std::future`, and thread-safe stack
 and queue implementations benchmarked against Boost.Lockfree.
 
-Written as coursework at MIPT (Applied Mathematics and Physics) in spring 2022
-and reorganised here for a portable toolchain.
+Written at MIPT (Applied Mathematics and Physics) in spring 2022 and
+reorganised here for a portable toolchain.
 
 ## Build
 
@@ -66,13 +66,12 @@ is measured against a lock-free implementation rather than asserted.
 
 | Component | Origin | Original dates |
 |---|---|---|
-| `src/monte_carlo_pi.cpp`, `include/timer.hpp` | `cpp_hommies` (private coursework repo), `sem2/hw7/` | 29 March – 4 April 2022 |
+| `src/monte_carlo_pi.cpp`, `include/timer.hpp` | `cpp_hommies` (private), `sem2/hw7/` | 29 March – 4 April 2022 |
 | `include/threadsafe_stack.hpp`, `include/threadsafe_queue.hpp`, both benchmarks | `cpp_hommies`, `sem2/hw8/` | 7 – 11 April 2022 |
 
-`cpp_hommies` is a private repository holding two semesters of MIPT C++
-coursework, 68 commits between February and May 2022. These files are lifted
-out of it unchanged apart from the portability fixes below; the exercise
-scaffolding around them stays where it belongs.
+`cpp_hommies` is a private repository of MIPT C++ work, 68 commits between
+February and May 2022. These files are lifted out of it unchanged apart from
+the portability fixes below.
 
 Changed since 2022: `TimerException` derived from `std::exception` using the
 `const char *` constructor, which is an MSVC extension, so none of this built
